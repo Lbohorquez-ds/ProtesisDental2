@@ -1,0 +1,11 @@
+Clientes:
+
+email: "ambarbaez@gmail.com", password: "12345678"
+email: "luanabustamante@gmail.com", password: "987654321"
+email: "liamdiaz@gmail.com", password: "lalalala"
+
+Empleados:
+
+email: "juanperez@dentart.com", password: "12345678", dynamicKey: "1234" 
+email: "analopez@dentart.com", password: "987654321", dynamicKey: "9876" 
+email: "justinasaez@dentart.com", password: "justina1", dynamicKey: "7421"

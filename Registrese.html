@@ -61,6 +61,19 @@
         <label for="telefono">Teléfono: </label>
         <input type="text" id="telefono" placeholder="Ingrese su telefono aqui..." class="Input-gral">
         <br>
+          
+         <label for="sexo">Sexo: </label>
+              <select id="sexo" style="font-size: 10px;" >
+                <option value="" style="font-size: 10px;" >Seleccione</option>
+                <option value="masculino" style="font-size: 10px;">Masculino</option>
+                <option value="femenino" style="font-size: 10px;">Femenino</option>
+              </select>
+            <br>
+
+        <label for="dni">Subir DNI (solo formato JPG): </label>
+        <input type="file" id="dni" accept="image/jpeg" style="font-size: 10px;">
+        <br>
+
 
         <label for="email">Mail: </label>
         <input type="email" id="email" placeholder="xxxxxxx@mail.com" class="Input-gral">
@@ -73,6 +86,11 @@
         <label for="contrasena2">Confirmar contraseña: </label>
         <input type="password" id="contrasena2" placeholder="Escriba su contraseña..." class="Input-gral">
         <br>
+          
+          <label>
+              <input type="checkbox" id="aceptoCondiciones" required> Acepto las normas y condiciones.
+          </label>
+          <br>
         
         <input class="form-buttons" type="submit" value="ENVIAR">
       </form>
@@ -82,8 +100,8 @@
   <footer class="footer-principal">
     <div class="contenedor contenedor-flex">
       <div class="columna columna-flex-footer">
-        <h2 class="titulo-columna"><img src="Imagenes/LogoDentArt.png" alt="" class="imagen-icono-bajo">
-        </h2>
+        <img src="Imagenes/LogoDentArt.png" alt="" class="imagen-icono-bajo">
+
         <p class="desc-columna">
         </p>
       </div>
@@ -154,7 +172,7 @@
 
       let errores = [];
 
-      // Validación de nombre y apellido (solo texto)
+ 
       const nombre = document.getElementById('nombre').value;
       const apellido = document.getElementById('apellido').value;
       const nombreRegex = /^[a-zA-ZÀ-ÿ\s]+$/;
@@ -171,7 +189,7 @@
         errores.push('El campo APELLIDO solo debe contener letras.');
       }
 
-      // Validación de teléfono (solo números, máximo 10 dígitos)
+ 
       const telefono = document.getElementById('telefono').value;
       const telefonoRegex = /^[0-9]{1,10}$/;
 
@@ -180,6 +198,22 @@
       } else if (!telefonoRegex.test(telefono)) {
         errores.push('El campo TELEFONO debe contener solo numeros y tener un maximo de 10 dígitos.');
       }
+        
+ 
+    const sexo = document.getElementById('sexo').value;
+    if (!sexo) {
+      errores.push('Debe seleccionar su sexo.');
+    }
+
+    // Validación del archivo DNI (solo archivos JPG)
+    const dniInput = document.getElementById('dni');
+    const dniFile = dniInput.files[0];
+    if (!dniFile) {
+      errores.push('Debe subir un archivo de DNI en formato JPG.');
+    } else if (dniFile.type !== 'image/jpeg') {
+      errores.push('El archivo debe ser en formato JPG.');
+    }
+
 
       // Validación de correo electrónico (debe contener un @)
       const email = document.getElementById('email').value;
@@ -191,7 +225,7 @@
         errores.push('El campo EMAIL no es valido.');
       }
 
-      // Validación de contraseñas
+      
       const contrasena1 = document.getElementById('contrasena1').value;
       const contrasena2 = document.getElementById('contrasena2').value;
 
@@ -206,7 +240,7 @@
       } else if (contrasena1 !== contrasena2) {
         errores.push('Las CONTRASEÑAS no coinciden.');
       }
-
+        
       // Mostrar los errores si existen
       if (errores.length > 0) {
         alert(errores.join('\n'));

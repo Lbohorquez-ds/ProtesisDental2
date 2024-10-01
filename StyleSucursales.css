@@ -43,6 +43,8 @@
     margin-bottom: 15px;
     margin: 20px;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+    align-items: center;     
+    text-align: center; 
 }
 
 .desc-columna3{
@@ -58,76 +60,99 @@
 
 .productos-4 {
     display: flex;
-    justify-content: center; 
-    flex-wrap: wrap; 
-    gap: 20px; 
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px; /* Espacio entre las tarjetas */
+    padding: 20px; /* Margen entre las tarjetas y los bordes de la pantalla */
+}
+
+.card {
+    width: 250px; /* Establecer un tamaño fijo para las tarjetas */
+    background-color: #1a1a1a; /* Color de fondo oscuro */
+    border: 2px solid #444; /* Borde estilizado */
+    border-radius: 15px; /* Bordes redondeados */
+    overflow: hidden; /* Evita que el iframe desborde la tarjeta */
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.02); /* Pequeño efecto de agrandamiento al pasar el cursor */
+    border-color: #FFD700; /* Cambia el color del borde al pasar el cursor */
+}
+
+.iframe, .card-body {
+    width: 100%;
+    height: 150px; /* Asegura que el iframe y el card-body tengan la misma altura */
+    border: none; /* Quitar bordes del iframe */
+    transition: transform 0.3s ease, background-color 0.3s ease; /* Transicion suave */
+}
+
+.card:hover .iframe {
+    transform: scale(1.05); /* Efecto de zoom en el iframe */
 }
 
 .card-body {
-    background-color: black;
-    width: 200px;
-    margin-bottom: 5%;
-    margin-top: 5px;
-    padding: 10px;
-    color: rgb(254, 254, 254);
-    border-radius: 10px;        
+    background-color: #222; /* Fondo más oscuro */
+    color: white;
+    display: flex;
+    flex-direction: column; /* Alinea elementos en columna (verticalmente) */
+    align-items: center; /* Centra los elementos horizontalmente */
+    justify-content: center; /* Centra los elementos verticalmente */
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.card-body2 {
-    background-color: black;
-    width: 85%;
-    margin-bottom: 5%;
-    margin-top: 5px;
-    padding: 10px;
-    color: rgb(254, 254, 254);
-    border-radius: 10px;        
+.card:hover .card-body {
+    background-color: #333; /* Cambia el fondo al pasar el cursor */
+    color: #FFD700; /* Cambia el color del texto al dorado */
+}
+
+.card-title {
+    font-size: 18px;
+    text-align: center; /* Asegura que el texto del título esté centrado */
+    width: 100%; /* Asegura que el título ocupe todo el ancho disponible */
 }
 
 .card-text {
-    text-align: justify;
-    padding: 10px;
-    font-size: 15px;
+    font-size: 14px;
+    text-align: center; /* Asegura que el texto también esté centrado */
+    width: 100%; /* Asegura que el texto ocupe todo el ancho disponible */
+}
+.card:nth-child(1) {
+    background-color: #2b2b2b; /* Color para la primera tarjeta */
 }
 
-.columna-50 {
-    display: flex;
-    justify-content: center; 
-    align-items: center;     
-    text-align: center; 
+.card:nth-child(2) {
+    background-color: #333333; /* Color para la segunda tarjeta */
+}
+
+.card:nth-child(3) {
+    background-color: #3b3b3b; /* Color para la tercera tarjeta */
+}
+
+.card:nth-child(4) {
+    background-color: #434343; /* Color para la cuarta tarjeta */
 }
 
 @media (max-width: 1024px) {
-    .img-banner {
-        height: 300px;
-    }
-
-    .contenido-banner {
-        font-size: 20px;
-        width: 95%;
-    }
-
     .productos-4 {
-        grid-template-columns: 25% 25% 25% 25%;
-        margin: 0;
+        grid-template-columns: 1fr 1fr; /* Cambia a dos columnas en pantallas medianas */
+    }
+    .desc-columna2 {
+        font-size: 20px;
     }
 }
 
 @media (max-width: 768px) {
+    .productos-4 {
+        grid-template-columns: 1fr; /* Cambia a una columna en pantallas pequeñas */
+    }
     .img-banner {
         height: 200px;
     }
-
     .contenido-banner {
         font-size: 16px;
-        width: 100%;
     }
-
-    .productos-4 {
-        grid-template-columns: 50% 50%;
-        margin: 0;
-    }
-
-    .columna-50 {
-        width: 100%;
+     .desc-columna2 {
+        font-size: 16px;
     }
 }

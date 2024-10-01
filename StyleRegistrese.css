@@ -73,7 +73,7 @@
 }
 
 .formulario-container input[type="submit"]:hover {
-    background-color: #333333;
+    background-color: darkslategrey;
 }
 
 @media (max-width: 768px) {

@@ -80,6 +80,10 @@
     .contenedor-grid {
         grid-template-columns: repeat(1, 1fr);
     }
+    .desc-columna2
+    {
+         font-size: 30px;
+    }
 }
 
 .item-grid {
@@ -98,20 +102,25 @@
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
 }
 
-.boton-ir {
-    padding: 10px 20px;
-    background: white;
+
+.btn{
+    width: calc(100%);
+    padding: 10px 50px 10px 50px;
+    margin-bottom: 10px;
     border: none;
-    border-radius: 10px;
-    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.7);
-    font-family: 'Helvetica', sans-serif;
-    font-size: 16px;
+    border-radius: 5px;
+    font-size: 15px;
+    background-color: white;
+    color: black;
     cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
 }
 
-.boton-ir:hover {
-    background: lightgray;
+.btn:hover {
+    background-color: darkslategrey;
 }
+
 
 .section-acceso {
   padding: 5px;

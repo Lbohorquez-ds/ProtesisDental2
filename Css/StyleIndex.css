@@ -1,0 +1,178 @@
+/*IMAGEN BANNER*/
+.banner {
+    position: relative;
+}
+
+.banner:before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .6);
+    z-index: 1000;
+    top: 0;
+}
+
+.img-banner {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+
+.contenido-banner {
+    width: 90%;
+    color: white;
+    text-align: center;
+    position: absolute;
+    z-index: 1500;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.columna-50 {
+    text-align: center;
+    margin: 30px;
+}
+
+.momentos-texto {
+    width: 80%;
+}
+
+/*MAIN*/
+.main {
+    background: #212121;
+}
+
+.desc-columna2 {
+    color: white;
+    font-size: 30px;
+    font-family: 'Helvetica', sans-serif;  
+    margin-bottom: 15px;
+    margin: 10px;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+}
+.desc-columna3 {
+    color: white;
+    font-size: 16px;
+    font-family: 'Arial', sans-serif;
+    margin-bottom: 20px;
+    margin: 10px;
+}
+
+.contenedor-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); 
+  gap: 20px;
+  padding: 20px;
+  margin: 10px;
+  border-radius: 20px;
+  background-color: darkslategrey;
+  color: white;
+  text-align: center;
+  font-family: 'Helvetica', sans-serif;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+}
+
+.item-grid {
+  padding: 30px;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.7);
+}
+
+.grupo-especiales {
+  padding: 20px;
+  margin: 10px;
+  border-radius: 20px;
+  background-color: darkslategrey;
+  color: white;
+  text-align: center;
+  font-family: 'Helvetica', sans-serif;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+}
+
+
+.btn{
+    width: calc(100%);
+    padding: 10px 50px 10px 50px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 15px;
+    background-color: white;
+    color: black;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+}
+
+.btn:hover {
+    background-color: darkslategrey;
+}
+
+
+.section-acceso {
+  padding: 5px;
+  margin: 0% 20% 0% 20%;
+  border-radius: 20px;
+  background-color: darkslategrey;
+  color: white;
+  text-align: center;
+  font-family: 'Helvetica', sans-serif;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+}
+
+.contenedor-grid-acceso {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); 
+  gap: 20px;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 20px;
+  background-color: black;
+  color: white;
+  text-align: center;
+  font-family: 'Helvetica', sans-serif;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+}
+
+.titulo-principal-sesion {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+
+@media (max-width: 768px) {
+    .contenedor-grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .desc-columna2
+    {
+         font-size: 20px;
+    }
+    .acceso-card
+    {
+        width: 50px;
+        align-content: center;
+    }
+    .nombre-sesion
+    {
+         font-size: 14px;
+    }
+   .btn{
+        width: 20px;
+        padding: 10px 20px 10px 20px;
+        margin-bottom: 5px;
+        border: none;
+        border-radius: 10px;
+        font-size: 12px;
+        background-color: white;
+        color: black;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        text-decoration: none;
+    }
+}
+

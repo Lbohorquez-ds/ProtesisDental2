@@ -1,0 +1,67 @@
+body {
+    margin: 0;
+    padding: 0px;
+}
+
+.main {
+    background-color: #333333;
+    color: white;
+    padding: 20px;
+}
+
+.titulo-lista {
+    text-align: center;
+    padding: 20px;
+}
+
+h2 {
+    margin: 0;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table,
+th,
+td {
+    border: 2px solid #ddd;
+}
+
+th,
+td {
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: black;
+}
+
+input {
+    margin: 5px;
+    padding: 5px;
+    width: calc(100% - 12px);
+    box-sizing: border-box;
+}
+
+/* Estilos para los botones de Editar y Eliminar */
+.boton-negro {
+    background-color: black;
+    color: white;
+    margin: 10px;
+    width: 250px;
+    height: 30px;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.tachado {
+    text-decoration: line-through;
+    color: gray;
+}
